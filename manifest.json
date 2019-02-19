@@ -1,6 +1,6 @@
 {
   "name": "Planning Poker",
-  "short_name": "PPoker",
+  "short_name": "AgilePoker",
   "display": "standalone",
   "start_url": "/planning-poker/",
   "icons": [
