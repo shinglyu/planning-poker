@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <link rel="manifest" href="manifest.json" />
+    <title>Planning Poker</title>
+    <style type="text/css" media="screen">
+      #card_row {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .card {
+        border: solid 1px black;
+        height: 80px;
+        width: 50px;
+        text-align: center;
+        line-height: 80px;
+        font-size: 40px;
+        border-radius: 10px;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="card_row"></div>
+    <script>
+      const cardPackFibonacci = [
+        "0",
+        "1",
+        "2",
+        "3",
+        "5",
+        "8",
+        "13",
+        "21",
+        "34",
+        "55",
+        "89",
+        "?",
+      ]
+
+      function generateCards(cardPack){
+        const cardRow = document.getElementById('card_row');
+        for (const cardNumber of cardPack) {
+          const card = document.createElement('div');
+          card.classList.add('card');
+          card.textContent = cardNumber;
+          cardRow.appendChild(card);
+        }
+      }
+
+      window.addEventListener('load', function(event) {
+        generateCards(cardPackFibonacci);
+      })
+    </script>
+  </body>
+</html>
