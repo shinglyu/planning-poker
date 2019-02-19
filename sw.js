@@ -1,5 +1,5 @@
 // Service Worker
-// version: 0.1
+// version: 0.2
 //
 self.addEventListener('install', function(e) {
   e.waitUntil(
