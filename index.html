@@ -106,6 +106,10 @@
         generateCards(cardPackFibonacci);
         document.getElementById('revealed_card').addEventListener('click', hideCard);
       })
+
+      navigator.serviceWorker && navigator.serviceWorker.register('./sw.js').then(function(registration) {
+        console.log('ServiceWorker registered with scope: ', registration.scope);
+      });
     </script>
   </body>
 </html>
